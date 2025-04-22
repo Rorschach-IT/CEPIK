@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 598,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "CepikApp\\MainPage.xaml.cs",
+              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml.cs",
+              "RelativeToolTip": "CepikApp\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T14:33:11.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "CepikApp\\AppShell.xaml",
+              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\AppShell.xaml",
+              "RelativeToolTip": "CepikApp\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T14:30:26.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "CepikApp\\MainPage.xaml",
+              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml",
+              "RelativeToolTip": "CepikApp\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T14:30:12.063Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 579,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
