@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|m:\\git repozitories\\cepik\\cepik\\src\\cepik\\cepikapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C26295D-11E0-40F7-BDC1-65B7649FAE9A}|CepikApp\\CepikApp.csproj|solutionrelative:cepikapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,41 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "CepikApp\\MainPage.xaml.cs",
-              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml.cs",
-              "RelativeToolTip": "CepikApp\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:33:11.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\AppShell.xaml",
-              "RelativeDocumentMoniker": "CepikApp\\AppShell.xaml",
-              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\AppShell.xaml",
-              "RelativeToolTip": "CepikApp\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-18T14:30:26.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml",
               "RelativeDocumentMoniker": "CepikApp\\MainPage.xaml",
               "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MainPage.xaml",
               "RelativeToolTip": "CepikApp\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-18T14:30:12.063Z",
+              "WhenOpened": "2025-04-24T18:59:32.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\App.xaml",
+              "RelativeDocumentMoniker": "CepikApp\\App.xaml",
+              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\App.xaml",
+              "RelativeToolTip": "CepikApp\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T18:57:04.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "CepikApp\\App.xaml.cs",
+              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\App.xaml.cs",
+              "RelativeToolTip": "CepikApp\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:45:15.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "CepikApp\\MauiProgram.cs",
+              "ToolTip": "M:\\Git repozitories\\CEPIK\\CEPIK\\src\\CEPIK\\CepikApp\\MauiProgram.cs",
+              "RelativeToolTip": "CepikApp\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:39:49.897Z",
               "EditorCaption": ""
             }
           ]
