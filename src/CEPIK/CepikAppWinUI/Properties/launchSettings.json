@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CepikAppWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CepikAppWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
