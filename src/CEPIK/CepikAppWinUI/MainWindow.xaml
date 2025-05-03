@@ -7,32 +7,98 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="CepikAppWinUI">
+    Title="Centralna Ewidencja pojazdów i kierowców">
 
-    <Grid Background="White" Padding="20">
+    <Grid Padding="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="0.9*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" 
-                   Grid.Column="0" 
-                   Grid.ColumnSpan="8" 
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="30"
-                   Text="CENTRALNA EWIDENCJA POJAZDÓW I KIEROWCÓW"/>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Background="Transparent">
+                                <TextBlock x:Name="ContentText"
+                                   Text="{TemplateBinding Content}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="14"/>
+
+                                <Border x:Name="Underline"
+                                Height="1"
+                                Background="{TemplateBinding Foreground}"
+                                VerticalAlignment="Bottom"
+                                Margin="0,0,0,2"
+                                Opacity="0"/>
+
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal"/>
+                                        <VisualState x:Name="PointerOver">
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetName="Underline"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="1" Duration="0:0:0.1"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
+        <FontIcon Grid.Row="0" Grid.Column="0" Glyph="&#xE80F;"/>
+
+        <StackPanel Grid.Row="0" 
+                    Grid.Column="1"
+                    Orientation="Horizontal" 
+                    Padding="20"
+                    HorizontalAlignment="Center"
+                    Spacing="15"
+                    Background="#f0f7f0">
+            <Button Content="Pojazdy" 
+                         Margin="5" 
+                         Foreground="#029c3d"/>
+            <Button Content="Osoby" 
+                         Margin="5" 
+                         Foreground="black"/>
+            <Button Content="Przypisania pojazdów" 
+                         Margin="5" 
+                         Foreground="black"/>
+            <Button Content="Przypisania ubezpieczeń" 
+                         Margin="5" 
+                         Foreground="black"/>
+            <Button Content="Uprawnienia" 
+                         Margin="5" 
+                         Foreground="black"/>
+            <Button Content="Kategorie prawa jazdy" 
+                         Margin="5" 
+                         Foreground="black"/>
+            <Button Content="Zdarzenia pojazdu" 
+                         Margin="5" 
+                         Foreground="black"/>
+            <Button Content="Wykroczenia" 
+                         Margin="5" 
+                         Background="#f0f7f0"
+                         Foreground="red"/>
+        </StackPanel>
+
+        <FontIcon Grid.Row="0" Grid.Column="2" Glyph="&#xE713;"/>
     </Grid>
+
 </Window>
+    
