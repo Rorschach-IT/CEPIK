@@ -1,3 +1,4 @@
+using CepikAppWinUI.UserControlls;
 using Microsoft.UI.Xaml;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -13,6 +14,11 @@ namespace CepikAppWinUI
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void ShowVehicles(object sender, RoutedEventArgs e)
+        {
+            // Set the ContentControl's content to your custom UserControl
+            VehiclesView.Visibility = Visibility.Visible;
         }
     }
 }
