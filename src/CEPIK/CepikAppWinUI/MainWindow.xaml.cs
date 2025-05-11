@@ -1,4 +1,4 @@
-using CepikAppWinUI.UserControlls;
+ï»¿using CepikAppWinUI.UserControlls;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
@@ -15,17 +15,35 @@ namespace CepikAppWinUI
         public MainWindow()
         {
             InitializeComponent();
-        }
-        private void ShowVehicles(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear(); // Wyczyœæ poprzedni¹ zawartoœæ
-            var vehiclesView = new VehiclesView(); // Stwórz now¹ instancjê
-            MainContentArea.Children.Add(vehiclesView); // Dodaj j¹ do siatki
 
-            // Dostosuj rozci¹ganie
+            var vehiclesView = new VehiclesView();
+            MainContentArea.Children.Add(vehiclesView);
+
             Grid.SetRow(vehiclesView, 0);
             Grid.SetColumn(vehiclesView, 0);
             Grid.SetColumnSpan(vehiclesView, 5);
+        }
+        private void ShowVehicles(object sender, RoutedEventArgs e)
+        {
+            MainContentArea.Children.Clear();
+
+            var vehiclesView = new VehiclesView();
+            MainContentArea.Children.Add(vehiclesView);
+
+            Grid.SetRow(vehiclesView, 0);
+            Grid.SetColumn(vehiclesView, 0);
+            Grid.SetColumnSpan(vehiclesView, 5);
+        }
+        private void ShowPeople(object sender, RoutedEventArgs e)
+        {
+            MainContentArea.Children.Clear();
+
+            var peopleView = new PeopleView();
+            MainContentArea.Children.Add(peopleView);
+
+            Grid.SetRow(peopleView, 0);
+            Grid.SetColumn(peopleView, 0);
+            Grid.SetColumnSpan(peopleView, 5);
         }
     }
 }

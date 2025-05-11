@@ -93,7 +93,8 @@
                          Click="ShowVehicles"/>
             <Button Content="Osoby" 
                          Margin="5" 
-                         Foreground="black"/>
+                         Foreground="black"
+                         Click="ShowPeople"/>
             <Button Content="Przypisania pojazdów" 
                          Margin="5" 
                          Foreground="black"/>
