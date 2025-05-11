@@ -59,5 +59,18 @@ namespace CepikAppWinUI
             Grid.SetColumn(insurancesView, 0);
             Grid.SetColumnSpan(insurancesView, 5);
         }
+
+        private void ShowVehicleOwners(object sender, RoutedEventArgs e)
+        {
+            MainContentArea.Children.Clear();
+
+            var vehicleOwnersView = new AssigningOwnersToVehiclesView();
+            MainContentArea.Children.Add(vehicleOwnersView);
+
+            Grid.SetRow(vehicleOwnersView, 0);
+            Grid.SetColumn(vehicleOwnersView, 0);
+            Grid.SetColumnSpan(vehicleOwnersView, 5);
+        }
     }
 }
+//ShowVehicleOwners

@@ -97,7 +97,8 @@
                          Click="ShowPeople"/>
             <Button Content="Przypisania pojazdów" 
                          Margin="5" 
-                         Foreground="black"/>
+                         Foreground="black"
+                         Click="ShowVehicleOwners"/>
             <Button Content="Przypisania ubezpieczeń" 
                          Margin="5" 
                          Foreground="black"

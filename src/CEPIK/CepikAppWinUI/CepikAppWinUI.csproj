@@ -15,6 +15,7 @@
   <ItemGroup>
     <None Remove="GlobalStylesForMainWindow.xaml" />
     <None Remove="UserControlls\AssigningInsurancesToVehiclesView.xaml" />
+    <None Remove="UserControlls\AssigningOwnersToVehiclesView.xaml" />
     <None Remove="UserControlls\GlobalStyles.xaml" />
     <None Remove="UserControlls\ReusableContent.xaml" />
     <None Remove="UserControlls\TEST!.xaml" />
@@ -46,6 +47,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250401001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="UserControlls\AssigningOwnersToVehiclesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="UserControlls\AssigningInsurancesToVehiclesView.xaml">
