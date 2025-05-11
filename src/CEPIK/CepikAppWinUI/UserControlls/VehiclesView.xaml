@@ -9,9 +9,16 @@
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource GridUserControl}">
-        <ScrollViewer
-              HorizontalScrollBarVisibility="Auto" 
-              VerticalScrollBarVisibility="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <local:ReusableContent Grid.Row="0"/>
+        
+        <ScrollViewer Grid.Row="1"
+                      HorizontalScrollBarVisibility="Auto" 
+                      VerticalScrollBarVisibility="Auto">
             <ListView SelectionMode="None">
                 <ListView.Header>
                     <Grid Style="{StaticResource GridUserControl}" Padding="10">
