@@ -100,7 +100,8 @@
                          Foreground="black"/>
             <Button Content="Przypisania ubezpieczeń" 
                          Margin="5" 
-                         Foreground="black"/>
+                         Foreground="black"
+                         Click="ShowInsurances"/>
             <Button Content="Uprawnienia" 
                          Margin="5" 
                          Foreground="black"/>

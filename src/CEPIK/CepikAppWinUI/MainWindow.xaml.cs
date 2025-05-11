@@ -23,6 +23,7 @@ namespace CepikAppWinUI
             Grid.SetColumn(vehiclesView, 0);
             Grid.SetColumnSpan(vehiclesView, 5);
         }
+
         private void ShowVehicles(object sender, RoutedEventArgs e)
         {
             MainContentArea.Children.Clear();
@@ -34,6 +35,7 @@ namespace CepikAppWinUI
             Grid.SetColumn(vehiclesView, 0);
             Grid.SetColumnSpan(vehiclesView, 5);
         }
+
         private void ShowPeople(object sender, RoutedEventArgs e)
         {
             MainContentArea.Children.Clear();
@@ -44,6 +46,18 @@ namespace CepikAppWinUI
             Grid.SetRow(peopleView, 0);
             Grid.SetColumn(peopleView, 0);
             Grid.SetColumnSpan(peopleView, 5);
+        }
+
+        private void ShowInsurances(object sender, RoutedEventArgs e)
+        {
+            MainContentArea.Children.Clear();
+
+            var insurancesView = new AssigningInsurancesToVehiclesView();
+            MainContentArea.Children.Add(insurancesView);
+
+            Grid.SetRow(insurancesView, 0);
+            Grid.SetColumn(insurancesView, 0);
+            Grid.SetColumnSpan(insurancesView, 5);
         }
     }
 }
