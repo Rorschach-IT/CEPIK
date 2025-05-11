@@ -105,7 +105,8 @@
                          Click="ShowInsurances"/>
             <Button Content="Uprawnienia" 
                          Margin="5" 
-                         Foreground="black"/>
+                         Foreground="black"
+                         Click="ShowPermissions"/>
             <Button Content="Kategorie prawa jazdy" 
                          Margin="5" 
                          Foreground="black"

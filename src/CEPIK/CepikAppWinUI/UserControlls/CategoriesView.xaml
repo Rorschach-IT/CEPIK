@@ -55,7 +55,7 @@
 
                         <Border Grid.Column="0" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <TextBlock Text="ID Kategorii" Style="{StaticResource header}" />
+                                <TextBlock Text="Kategoria ID" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
