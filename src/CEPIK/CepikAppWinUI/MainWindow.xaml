@@ -115,8 +115,8 @@
                          Foreground="black"/>
             <Button Content="Wykroczenia" 
                          Margin="5" 
-                         Background="#f0f7f0"
-                         Foreground="red"/>
+                         Foreground="red"
+                         Click="ShowOffences"/>
         </StackPanel>
 
         <FontIcon Grid.Row="0" Grid.Column="4" Glyph="&#xE713;" FontSize="25"/>

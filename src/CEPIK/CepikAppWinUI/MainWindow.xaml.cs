@@ -83,6 +83,18 @@ namespace CepikAppWinUI
             Grid.SetColumn(licenceCategoriesView, 0);
             Grid.SetColumnSpan(licenceCategoriesView, 5);
         }
+
+        private void ShowOffences(object sender, RoutedEventArgs e)
+        {
+            MainContentArea.Children.Clear();
+
+            var offencesView = new OffencesView();
+            MainContentArea.Children.Add(offencesView);
+
+            Grid.SetRow(offencesView, 0);
+            Grid.SetColumn(offencesView, 0);
+            Grid.SetColumnSpan(offencesView, 5);
+        }
     }
 }
-//ShowLicenceCategories
+//ShowOffences
