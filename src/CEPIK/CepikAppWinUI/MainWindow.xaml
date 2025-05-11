@@ -108,7 +108,8 @@
                          Foreground="black"/>
             <Button Content="Kategorie prawa jazdy" 
                          Margin="5" 
-                         Foreground="black"/>
+                         Foreground="black"
+                         Click="ShowLicenceCategories"/>
             <Button Content="Zdarzenia pojazdu" 
                          Margin="5" 
                          Foreground="black"/>
