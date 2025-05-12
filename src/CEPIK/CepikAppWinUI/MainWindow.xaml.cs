@@ -16,109 +16,41 @@ namespace CepikAppWinUI
         {
             InitializeComponent();
 
-            var vehiclesView = new VehiclesView();
-            MainContentArea.Children.Add(vehiclesView);
-
-            Grid.SetRow(vehiclesView, 0);
-            Grid.SetColumn(vehiclesView, 0);
-            Grid.SetColumnSpan(vehiclesView, 5);
+            LoadView(new VehiclesView()); // Default start
         }
 
-        private void ShowVehicles(object sender, RoutedEventArgs e)
+        private void LoadView(UIElement view)
         {
-            MainContentArea.Children.Clear();
+            MainContentArea.Children.Clear(); // Remove previous
+            MainContentArea.Children.Add(view); // Add new
 
-            var vehiclesView = new VehiclesView();
-            MainContentArea.Children.Add(vehiclesView);
-
-            Grid.SetRow(vehiclesView, 0);
-            Grid.SetColumn(vehiclesView, 0);
-            Grid.SetColumnSpan(vehiclesView, 5);
+            Grid.SetRow((FrameworkElement)view, 0);
+            Grid.SetColumn((FrameworkElement)view, 0);
+            Grid.SetColumnSpan((FrameworkElement)view, 5);
         }
 
-        private void ShowPeople(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear();
+        private void ShowVehicles(object sender, RoutedEventArgs e) =>
+            LoadView(new VehiclesView());
 
-            var peopleView = new PeopleView();
-            MainContentArea.Children.Add(peopleView);
+        private void ShowPeople(object sender, RoutedEventArgs e) =>
+            LoadView(new PeopleView());
 
-            Grid.SetRow(peopleView, 0);
-            Grid.SetColumn(peopleView, 0);
-            Grid.SetColumnSpan(peopleView, 5);
-        }
+        private void ShowInsurances(object sender, RoutedEventArgs e) =>
+            LoadView(new AssigningInsurancesToVehiclesView());
 
-        private void ShowInsurances(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear();
+        private void ShowVehicleOwners(object sender, RoutedEventArgs e) =>
+            LoadView(new AssigningOwnersToVehiclesView());
 
-            var insurancesView = new AssigningInsurancesToVehiclesView();
-            MainContentArea.Children.Add(insurancesView);
+        private void ShowLicenceCategories(object sender, RoutedEventArgs e) =>
+            LoadView(new CategoriesView());
 
-            Grid.SetRow(insurancesView, 0);
-            Grid.SetColumn(insurancesView, 0);
-            Grid.SetColumnSpan(insurancesView, 5);
-        }
+        private void ShowOffences(object sender, RoutedEventArgs e) =>
+            LoadView(new OffencesView());
 
-        private void ShowVehicleOwners(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear();
+        private void ShowPermissions(object sender, RoutedEventArgs e) =>
+            LoadView(new AssigningOwnersToLicencesView());
 
-            var vehicleOwnersView = new AssigningOwnersToVehiclesView();
-            MainContentArea.Children.Add(vehicleOwnersView);
-
-            Grid.SetRow(vehicleOwnersView, 0);
-            Grid.SetColumn(vehicleOwnersView, 0);
-            Grid.SetColumnSpan(vehicleOwnersView, 5);
-        }
-
-        private void ShowLicenceCategories(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear();
-
-            var licenceCategoriesView = new CategoriesView();
-            MainContentArea.Children.Add(licenceCategoriesView);
-
-            Grid.SetRow(licenceCategoriesView, 0);
-            Grid.SetColumn(licenceCategoriesView, 0);
-            Grid.SetColumnSpan(licenceCategoriesView, 5);
-        }
-
-        private void ShowOffences(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear();
-
-            var offencesView = new OffencesView();
-            MainContentArea.Children.Add(offencesView);
-
-            Grid.SetRow(offencesView, 0);
-            Grid.SetColumn(offencesView, 0);
-            Grid.SetColumnSpan(offencesView, 5);
-        }
-
-        private void ShowPermissions(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear();
-
-            var permissionsView = new AssigningOwnersToLicencesView();
-            MainContentArea.Children.Add(permissionsView);
-
-            Grid.SetRow(permissionsView, 0);
-            Grid.SetColumn(permissionsView, 0);
-            Grid.SetColumnSpan(permissionsView, 5);
-        }
-
-        private void ShowVehiclesEvents(object sender, RoutedEventArgs e)
-        {
-            MainContentArea.Children.Clear();
-
-            var vehiclesEventsView = new VehiclesEventsView();
-            MainContentArea.Children.Add(vehiclesEventsView);
-
-            Grid.SetRow(vehiclesEventsView, 0);
-            Grid.SetColumn(vehiclesEventsView, 0);
-            Grid.SetColumnSpan(vehiclesEventsView, 5);
-        }
+        private void ShowVehiclesEvents(object sender, RoutedEventArgs e) =>
+            LoadView(new VehiclesEventsView());
     }
 }
-//ShowVehicleEvents
