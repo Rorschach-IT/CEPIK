@@ -107,6 +107,18 @@ namespace CepikAppWinUI
             Grid.SetColumn(permissionsView, 0);
             Grid.SetColumnSpan(permissionsView, 5);
         }
+
+        private void ShowVehiclesEvents(object sender, RoutedEventArgs e)
+        {
+            MainContentArea.Children.Clear();
+
+            var vehiclesEventsView = new VehiclesEventsView();
+            MainContentArea.Children.Add(vehiclesEventsView);
+
+            Grid.SetRow(vehiclesEventsView, 0);
+            Grid.SetColumn(vehiclesEventsView, 0);
+            Grid.SetColumnSpan(vehiclesEventsView, 5);
+        }
     }
 }
-//ShowPermissions
+//ShowVehicleEvents

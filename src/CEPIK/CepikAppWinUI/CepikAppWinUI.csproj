@@ -22,6 +22,7 @@
     <None Remove="UserControlls\OffencesView.xaml" />
     <None Remove="UserControlls\ReusableContent.xaml" />
     <None Remove="UserControlls\TEST!.xaml" />
+    <None Remove="UserControlls\VehiclesEventsView.xaml" />
     <None Remove="UserControlls\VehiclesView.xaml" />
   </ItemGroup>
 
@@ -50,6 +51,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250401001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="UserControlls\VehiclesEventsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="UserControlls\AssigningOwnersToLicencesView.xaml">

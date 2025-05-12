@@ -113,7 +113,8 @@
                          Click="ShowLicenceCategories"/>
             <Button Content="Zdarzenia pojazdu" 
                          Margin="5" 
-                         Foreground="black"/>
+                         Foreground="black"
+                         Click="ShowVehiclesEvents"/>
             <Button Content="Wykroczenia" 
                          Margin="5" 
                          Foreground="red"
