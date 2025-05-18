@@ -12,18 +12,8 @@
 
     <Grid Padding="20"
           HorizontalAlignment="Stretch"
-          VerticalAlignment="Stretch">
-        <Grid.Background>
-            <RadialGradientBrush 
-            Center="0.5,0.5" 
-            GradientOrigin="0.5,0.5"
-            RadiusX="0.8" 
-            RadiusY="0.8">
-                <GradientStop Color="#e4eded" Offset="0"/>
-                <GradientStop Color="#e1f2f1" Offset="1"/>
-            </RadialGradientBrush>
-        </Grid.Background>
-
+          VerticalAlignment="Stretch"
+          Background="{StaticResource LightGreenRadialBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>

@@ -27,12 +27,15 @@
             Pojazdy
         </TextBlock>
 
+        <!--Add new vehicle-->
         <Button Style="{StaticResource ButtonIcon}"
-                Grid.Column="1">
+                Grid.Column="1"
+                Click="AddNewVehicle">
             <FontIcon Glyph="&#xE710;" 
               Style="{StaticResource IconContent}"/>
         </Button>
 
+        <!--Delete selected vehicle(s)-->
         <Button Style="{StaticResource ButtonIcon}"
                 Grid.Column="2">
             <FontIcon Glyph="&#xE74D;" 

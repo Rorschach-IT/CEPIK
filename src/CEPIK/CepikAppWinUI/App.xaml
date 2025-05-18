@@ -9,6 +9,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <ResourceDictionary Source="UserControlls/GlobalStyles.xaml"/>
+                <ResourceDictionary Source="Formulas/GlobalStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
             <Style TargetType="Grid">
@@ -24,6 +25,14 @@
             <Style TargetType="FontIcon">
                 <Setter Property="Foreground" Value="Black"/>
             </Style>
+            <RadialGradientBrush x:Key="LightGreenRadialBrush"
+                         Center="0.5,0.5"
+                         GradientOrigin="0.5,0.5"
+                         RadiusX="0.8"
+                         RadiusY="0.8">
+                <GradientStop Color="#e4eded" Offset="0"/>
+                <GradientStop Color="#e1f2f1" Offset="1"/>
+            </RadialGradientBrush>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

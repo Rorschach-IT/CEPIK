@@ -13,6 +13,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Formulas\AddVehicleWindow.xaml" />
+    <None Remove="Formulas\GlobalStyles.xaml" />
     <None Remove="GlobalStylesForMainWindow.xaml" />
     <None Remove="UserControlls\AssigningInsurancesToVehiclesView.xaml" />
     <None Remove="UserControlls\AssigningOwnersToLicencesView.xaml" />
@@ -51,6 +53,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250401001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Formulas\GlobalStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="UserControlls\VehiclesEventsView.xaml">
@@ -104,6 +111,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="UserControlls\VehiclesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Formulas\AddVehicleWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

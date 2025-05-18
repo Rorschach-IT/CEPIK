@@ -1,0 +1,125 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CepikAppWinUI.Formulas">
+
+    <Style x:Key="SaveButton" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="RootGrid" Background="#036e09" Padding="10">
+                        <TextBlock x:Name="ContentText"
+                                   Text="{TemplateBinding Content}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="12"/>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+
+                                <!-- Normal state: animate BACK to original color -->
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimation
+                                            Storyboard.TargetName="RootGrid"
+                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                            To="#036e09"
+                                            Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <!-- PointerOver state: animate TO hover color -->
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ColorAnimation
+                                            Storyboard.TargetName="RootGrid"
+                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                            To="#04a20f"
+                                            Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="formulaHeaderTextBlock" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Margin" Value="15"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+    </Style>
+
+    <Style x:Key="formulaTextBlock" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="15"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <Style x:Key="formulaTextBox" TargetType="TextBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="0 20 20 0"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid>
+                        <Border x:Name="OuterBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="2">
+                            <ScrollViewer x:Name="ContentElement"
+                                      Margin="0"
+                                      Padding="{TemplateBinding Padding}"
+                                      HorizontalScrollBarVisibility="Hidden"
+                                      VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+
+                                <!-- Normal -->
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Target="OuterBorder.BorderThickness" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <!-- PointerOver -->
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Target="OuterBorder.BorderThickness" Value="1.2"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <!-- Focused -->
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Target="OuterBorder.BorderBrush" Value="DarkGreen"/>
+                                        <Setter Target="OuterBorder.BorderThickness" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="formulaComboBox" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+</ResourceDictionary>
