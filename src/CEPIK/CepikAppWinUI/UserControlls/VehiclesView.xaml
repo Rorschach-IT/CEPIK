@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CepikAppWinUI.UserControlls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodel="using:CepikAppWinUI.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:VehicleViewModel}"
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource GridUserControl}">
@@ -48,27 +48,28 @@
                       Grid.ColumnSpan="4"
                       HorizontalScrollBarVisibility="Auto" 
                       VerticalScrollBarVisibility="Auto">
-            <ListView SelectionMode="None">
+            <ListView SelectionMode="None"
+                      ItemsSource="{Binding Vehicles}">
                 <ListView.Header>
-                    <Grid Style="{StaticResource GridUserControl}" Padding="10">
+                    <Grid Style="{StaticResource GridUserControl}" Padding="16 10 12 0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/> <!--Rejestracja-->
+                                <ColumnDefinition Width="1.2*"/> <!--VIN-->
+                                <ColumnDefinition Width="*"/> <!--Marka-->
+                                <ColumnDefinition Width="0.8*"/> <!--Model-->
+                                <ColumnDefinition Width="*"/> <!--Rodzaj-->
+                                <ColumnDefinition Width="*"/> <!--Rok-->
+                                <ColumnDefinition Width="1.4*"/> <!--Dane silnika-->
+                                <ColumnDefinition Width="*"/> <!--Rodzaj paliwa-->
+                                <ColumnDefinition Width="0.8*"/> <!--Miejsca-->
+                                <ColumnDefinition Width="0.8*"/> <!--Kolor-->
+                                <ColumnDefinition Width="*"/> <!--Przegląd-->
+                                <ColumnDefinition Width="*"/> <!--Status rejestracji-->
                         </Grid.ColumnDefinitions>
-
+                        
                         <Border Grid.Column="0" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <TextBlock Text="Numer rejestracyjny" Style="{StaticResource header}" />
+                                <TextBlock Text="Rejestracja" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
@@ -98,7 +99,7 @@
                         </Border>
                         <Border Grid.Column="5" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <TextBlock Text="Rok produkcji" Style="{StaticResource header}" />
+                                <TextBlock Text="Rok" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
@@ -116,7 +117,7 @@
                         </Border>
                         <Border Grid.Column="8" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <TextBlock Text="Liczba miejsc" Style="{StaticResource header}" />
+                                <TextBlock Text="Miejsca" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
@@ -128,13 +129,13 @@
                         </Border>
                         <Border Grid.Column="10" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <TextBlock Text="Termin przegladu" Style="{StaticResource header}" />
+                                <TextBlock Text="Przegląd" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="11" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <TextBlock Text="Status rejestracji" Style="{StaticResource header}" />
+                                <TextBlock Text="Status" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
@@ -142,34 +143,58 @@
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
+                        <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/> <!--Rejestracja-->
+                                <ColumnDefinition Width="1.2*"/> <!--VIN-->
+                                <ColumnDefinition Width="*"/> <!--Marka-->
+                                <ColumnDefinition Width="0.8*"/> <!--Model-->
+                                <ColumnDefinition Width="*"/> <!--Rodzaj-->
+                                <ColumnDefinition Width="*"/> <!--Rok-->
+                                <ColumnDefinition Width="1.4*"/> <!--Dane silnika-->
+                                <ColumnDefinition Width="*"/> <!--Rodzaj paliwa-->
+                                <ColumnDefinition Width="0.8*"/> <!--Miejsca-->
+                                <ColumnDefinition Width="0.8*"/> <!--Kolor-->
+                                <ColumnDefinition Width="*"/> <!--Przegląd-->
+                                <ColumnDefinition Width="*"/> <!--Status rejestracji-->
                             </Grid.ColumnDefinitions>
 
-                            <!--<TextBlock Text="{x:Bind numer_rejestracyjny}" Grid.Column="0"/>
-                    <TextBlock Text="{x:Bind VIN}" Grid.Column="1"/>
-                    <TextBlock Text="{x:Bind marka}" Grid.Column="2"/>
-                    <TextBlock Text="{x:Bind model}" Grid.Column="3"/>
-                    <TextBlock Text="{x:Bind rodzaj}" Grid.Column="4"/>
-                    <TextBlock Text="{x:Bind rok_produkcji}" Grid.Column="5"/>
-                    <TextBlock Text="{x:Bind dane_silnika}" Grid.Column="6"/>
-                    <TextBlock Text="{x:Bind rodzaj_paliwa}" Grid.Column="7"/>
-                    <TextBlock Text="{x:Bind liczba_miejsc}" Grid.Column="8"/>
-                    <TextBlock Text="{x:Bind kolor}" Grid.Column="9"/>
-                    <TextBlock Text="{x:Bind termin_przegladu}" Grid.Column="10"/>
-                    <TextBlock Text="{x:Bind status_rejestracji}" Grid.Column="11"/>-->
+                            <Border Grid.Column="0" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding NumerRejestracyjny}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="1" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Vin}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="2" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Marka}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="3" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Model}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="4" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Rodzaj}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="5" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding RokProdukcji}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="6" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding DaneSilnika}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="7" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding RodzajPaliwa}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="8" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding LiczbaMiejsc}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="9" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Kolor}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="10" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding TerminPrzeglądu}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="11" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding StatusRejestracji}" Style="{StaticResource content}"/>
+                            </Border>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

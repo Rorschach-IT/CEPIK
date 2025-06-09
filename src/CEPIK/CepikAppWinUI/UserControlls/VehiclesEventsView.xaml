@@ -6,6 +6,7 @@
     xmlns:local="using:CepikAppWinUI.UserControlls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodel="using:CepikAppWinUI.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:VehicleEventsViewModel}"
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource GridUserControl}">
@@ -43,85 +44,114 @@
 
         <ScrollViewer Grid.Row="1"
                   Grid.ColumnSpan="4"
-                  HorizontalScrollBarVisibility="Auto" 
+                  HorizontalScrollBarVisibility="Disabled" 
                   VerticalScrollBarVisibility="Auto">
-            <ListView SelectionMode="None">
+            <ListView SelectionMode="None"
+                      ItemsSource="{Binding VehiclesEvents}">
                 <ListView.Header>
-                    <Grid Style="{StaticResource GridUserControl}" Padding="10">
+                    <Grid Style="{StaticResource GridUserControl}" Padding="16 10 12 0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.12*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="0.38*"/>
                         </Grid.ColumnDefinitions>
 
                         <Border Grid.Column="0" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Numer rejestracyjny" Style="{StaticResource header}" />
-                                <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
+                                <FontIcon Glyph="&#xE74B;"
+                                          Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="1" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="PESEL" Style="{StaticResource header}" />
-                                <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
+                                <FontIcon Glyph="&#xE74B;"
+                                          Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="2" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Imię" Style="{StaticResource header}" />
-                                <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
+                                <FontIcon Glyph="&#xE74B;" 
+                                          Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="3" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Nazwisko" Style="{StaticResource header}" />
-                                <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
+                                <FontIcon Glyph="&#xE74B;" 
+                                          Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="4" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Data" Style="{StaticResource header}" />
-                                <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
+                                <FontIcon Glyph="&#xE74B;"
+                                          Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="5" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Rodzaj" Style="{StaticResource header}" />
-                                <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
+                                <FontIcon Glyph="&#xE74B;" 
+                                          Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="6" Style="{StaticResource headerBorder}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Opis" Style="{StaticResource header}" />
-                                <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
+                                <FontIcon Glyph="&#xE74B;"
+                                          Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
                     </Grid>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
+                        <Grid VerticalAlignment="Top">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.12*"/>
+                                <ColumnDefinition Width="0.1*"/>
+                                <ColumnDefinition Width="0.1*"/>
+                                <ColumnDefinition Width="0.1*"/>
+                                <ColumnDefinition Width="0.1*"/>
+                                <ColumnDefinition Width="0.1*"/>
+                                <ColumnDefinition Width="0.38*"/>
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                            <!--<TextBlock Text="{x:Bind numer_rejestracyjny}" Grid.Column="0"/>
-                            <TextBlock Text="{x:Bind PESEL}" Grid.Column="1"/>
-                            <TextBlock Text="{x:Bind imie}" Grid.Column="2"/>
-                            <TextBlock Text="{x:Bind nazwisko}" Grid.Column="3"/>
-                            <TextBlock Text="{x:Bind data}" Grid.Column="4"/>
-                            <TextBlock Text="{x:Bind rodzaj}" Grid.Column="5"/>
-                            <TextBlock Text="{x:Bind opis}" Grid.Column="6"/>-->
+                            <Border Grid.Column="0" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding NumerRejestracyjny}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="1" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Pesel}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="2" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Imię}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="3" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Nazwisko}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="4" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Data}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="5" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Rodzaj}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="6" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Opis}"
+                                           TextWrapping="Wrap"
+                                           TextTrimming="CharacterEllipsis"
+                                           VerticalAlignment="Top"
+                                           Style="{StaticResource content}"/>
+                            </Border>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

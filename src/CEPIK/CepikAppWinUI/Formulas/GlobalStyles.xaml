@@ -118,8 +118,25 @@
         </Setter>
     </Style>
 
+    <Style x:Key="CalendarDatePicking" TargetType="CalendarDatePicker">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="PlaceholderText" Value="Wybierz"/>
+    </Style>
+
+    <Style x:Key="formulaComboBoxBorder" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Width" Value="210"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
     <Style x:Key="formulaComboBox" TargetType="ComboBox">
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="PlaceholderForeground" Value="Black"/>
+        <Setter Property="Margin" Value="6"/>
     </Style>
 </ResourceDictionary>

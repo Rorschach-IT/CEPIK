@@ -6,6 +6,7 @@
     xmlns:local="using:CepikAppWinUI.UserControlls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="using:CepikAppWinUI.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:PersonViewModel}"
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource GridUserControl}">
@@ -45,9 +46,10 @@
                       Grid.ColumnSpan="4"
                       HorizontalScrollBarVisibility="Auto" 
                       VerticalScrollBarVisibility="Auto">
-            <ListView SelectionMode="None">
+            <ListView SelectionMode="None"
+                      ItemsSource="{Binding People}">
                 <ListView.Header>
-                    <Grid Style="{StaticResource GridUserControl}" Padding="10">
+                    <Grid Style="{StaticResource GridUserControl}" Padding="16 10 12 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -104,7 +106,7 @@
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
+                        <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -115,13 +117,27 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <!--<TextBlock Text="{x:Bind PESEL}" Grid.Column="0"/>
-                            <TextBlock Text="{x:Bind imie}" Grid.Column="1"/>
-                            <TextBlock Text="{x:Bind nazwisko}" Grid.Column="2"/>
-                            <TextBlock Text="{x:Bind status}" Grid.Column="3"/>
-                            <TextBlock Text="{x:Bind ilosc_punktow_karnych}" Grid.Column="4"/>
-                            <TextBlock Text="{x:Bind numer_telefonu}" Grid.Column="5"/>
-                            <TextBlock Text="{x:Bind dane_silnika}" Grid.Column="6"/>-->
+                            <Border Grid.Column="0" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Pesel}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="1" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Imię}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="2" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Nazwisko}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="3" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Status}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="4" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding IlośćPunktówKarnych}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="5" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding NumerTelefonu}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="6" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Email}" Style="{StaticResource content}"/>
+                            </Border>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

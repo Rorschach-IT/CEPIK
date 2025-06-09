@@ -1,3 +1,4 @@
+using CepikAppWinUI.ViewModel;
 using Microsoft.UI.Xaml.Controls;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -10,6 +11,11 @@ namespace CepikAppWinUI.UserControlls
         public PeopleView()
         {
             this.InitializeComponent();
+
+            var peopleViewModel = new PersonViewModel();
+            DataContext = peopleViewModel;
+
+            peopleViewModel.LoadPersonsData();
         }
     }
 }

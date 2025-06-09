@@ -6,6 +6,7 @@
     xmlns:local="using:CepikAppWinUI.UserControlls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodel="using:CepikAppWinUI.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CategoryViewModel}"
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource GridUserControl}">
@@ -43,14 +44,15 @@
 
         <ScrollViewer Grid.Row="1"
                   Grid.ColumnSpan="4"
-                  HorizontalScrollBarVisibility="Auto" 
+                  HorizontalScrollBarVisibility="Disabled" 
                   VerticalScrollBarVisibility="Auto">
-            <ListView SelectionMode="None">
+            <ListView SelectionMode="None"
+                      ItemsSource="{Binding Categories}">
                 <ListView.Header>
-                    <Grid Style="{StaticResource GridUserControl}" Padding="10">
+                    <Grid Style="{StaticResource GridUserControl}" Padding="16 10 12 0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.05*"/>
-                            <ColumnDefinition Width="0.95*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="0.9*"/>
                         </Grid.ColumnDefinitions>
 
                         <Border Grid.Column="0" Style="{StaticResource headerBorder}">
@@ -69,14 +71,25 @@
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
+                        <Grid VerticalAlignment="Top">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition Width="0.95*"/>
+                                <ColumnDefinition Width="0.1*"/>
+                                <ColumnDefinition Width="0.9*"/>
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                            <!--<TextBlock Text="{x:Bind kategoria_id}" Grid.Column="0"/>
-                        <TextBlock Text="{x:Bind opis}" Grid.Column="1"/>-->
+                            <Border Grid.Column="0" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding KategoriaId}" Style="{StaticResource content}"/>
+                            </Border>
+                            <Border Grid.Column="1" Style="{StaticResource contentBorder}">
+                                <TextBlock Text="{Binding Opis}" 
+                                           TextWrapping="Wrap" 
+                                           TextTrimming="CharacterEllipsis"
+                                           VerticalAlignment="Top"
+                                           Style="{StaticResource content}"/>
+                            </Border>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

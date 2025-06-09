@@ -57,34 +57,91 @@
         <TextBlock Text="Numer rejestracyjny:" Grid.Row="1" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
         <TextBox x:Name="RegNumberBox" Grid.Row="1" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="VIN:" Grid.Row="2" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="VinBox" Grid.Row="2" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="VIN:" 
+                   Grid.Row="2" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="VinBox" 
+                 Grid.Row="2" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Marka:" Grid.Row="3" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="BrandBox" Grid.Row="3" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Marka:" 
+                   Grid.Row="3" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="BrandBox" 
+                 Grid.Row="3" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Model:" Grid.Row="4" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="ModelBox" Grid.Row="4" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Model:" 
+                   Grid.Row="4" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="ModelBox" 
+                 Grid.Row="4" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Rodzaj:" Grid.Row="5" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="TypeBox" Grid.Row="5" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Rodzaj:" 
+                   Grid.Row="5" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="TypeBox" 
+                 Grid.Row="5" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Rok produkcji:" Grid.Row="6" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="YearBox" Grid.Row="6" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Rok produkcji:" 
+                   Grid.Row="6" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="YearBox"
+                 Grid.Row="6" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Dane silnika:" Grid.Row="7" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="EngineBox" Grid.Row="7" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Dane silnika:" 
+                   Grid.Row="7" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="EngineBox" 
+                 Grid.Row="7" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Rodzaj paliwa:" Grid.Row="8" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="FuelBox" Grid.Row="8" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Rodzaj paliwa:" 
+                   Grid.Row="8" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="FuelBox" 
+                 Grid.Row="8" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Liczba miejsc:" Grid.Row="9" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="SeatsBox" Grid.Row="9" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Liczba miejsc:" 
+                   Grid.Row="9" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="SeatsBox" 
+                 Grid.Row="9" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Kolor:" Grid.Row="10" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
-        <TextBox x:Name="ColorBox" Grid.Row="10" Grid.Column="1" Style="{StaticResource formulaTextBox}"/>
+        <TextBlock Text="Kolor:" 
+                   Grid.Row="10" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
+        <TextBox x:Name="ColorBox" 
+                 Grid.Row="10" 
+                 Grid.Column="1" 
+                 Style="{StaticResource formulaTextBox}"/>
 
-        <TextBlock Text="Termin przeglądu:" Grid.Row="11" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
+        <TextBlock Text="Termin przeglądu:" 
+                   Grid.Row="11" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
         <CalendarDatePicker x:Name="InspectionDatePicker" 
                             Grid.Row="11" 
                             Grid.Column="1"
@@ -92,21 +149,19 @@
                             Foreground="black" 
                             BorderBrush="Black" 
                             BorderThickness="1" 
-                            Background="Transparent"/>
+                            Background="Transparent"
+                            Style="{StaticResource CalendarDatePicking}"/>
 
-
-        <TextBlock Text="Status rejestracji:" Grid.Row="12" Grid.Column="0" Style="{StaticResource formulaTextBlock}"/>
+        <TextBlock Text="Status rejestracji:" 
+                   Grid.Row="12" 
+                   Grid.Column="0" 
+                   Style="{StaticResource formulaTextBlock}"/>
 
         <Border Grid.Row="12" 
                 Grid.Column="1"
-                BorderBrush="Black"
-                BorderThickness="1"
-                Width="200"
-                HorizontalAlignment="Left">
+                Style="{StaticResource formulaComboBoxBorder}">
             <ComboBox x:Name="StatusBox" 
                   PlaceholderText="Wybierz"
-                  PlaceholderForeground="Black"
-                  Margin="5"
                   Style="{StaticResource formulaComboBox}">
                 <ComboBoxItem Content="Zarejestrowany"/>
                 <ComboBoxItem Content="Niezarejestrowany"/>

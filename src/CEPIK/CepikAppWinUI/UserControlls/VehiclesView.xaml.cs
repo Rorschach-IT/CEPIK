@@ -1,4 +1,5 @@
 using CepikAppWinUI.Formulas;
+using CepikAppWinUI.ViewModel;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -14,6 +15,11 @@ namespace CepikAppWinUI.UserControlls
         public VehiclesView()
         {
             this.InitializeComponent();
+
+            var vehicleViewModel = new VehicleViewModel();
+            DataContext = vehicleViewModel;
+
+            vehicleViewModel.LoadVehiclesData();
         }
 
         private void AddNewVehicle(object sender, RoutedEventArgs e)
