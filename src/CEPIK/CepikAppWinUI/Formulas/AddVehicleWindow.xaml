@@ -50,7 +50,7 @@
             <Button Style="{StaticResource SaveButton}"
                 Content="Zapisz"
                 Grid.Column="1"
-                Click="OnSaveClicked"/>
+                Click="OnSaveClickedAsync"/>
 
         </Grid>
 

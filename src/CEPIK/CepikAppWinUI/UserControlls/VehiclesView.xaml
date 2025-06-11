@@ -46,8 +46,7 @@
 
         <ScrollViewer Grid.Row="1"
                       Grid.ColumnSpan="4"
-                      HorizontalScrollBarVisibility="Auto" 
-                      VerticalScrollBarVisibility="Auto">
+                      Style="{StaticResource ScrollVieverMain}">
             <ListView SelectionMode="None"
                       ItemsSource="{Binding Vehicles}">
                 <ListView.Header>
@@ -66,74 +65,110 @@
                                 <ColumnDefinition Width="*"/> <!--Przegląd-->
                                 <ColumnDefinition Width="*"/> <!--Status rejestracji-->
                         </Grid.ColumnDefinitions>
-                        
-                        <Border Grid.Column="0" Style="{StaticResource headerBorder}">
+
+                        <Border Grid.Column="0" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped" 
+                                Tag="numer_rejestracyjny">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Rejestracja" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="1" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="1" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped" 
+                                Tag="VIN">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="VIN" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="2" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="2" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="marka">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Marka" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="3" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="3" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="model">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Model" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="4" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="4" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="rodzaj">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Rodzaj" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="5" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="5" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="rok_produkcji">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Rok" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="6" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="6" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="dane_silnika">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Dane silnika" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="7" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="7" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="rodzaj_paliwa">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Rodzaj paliwa" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="8" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="8" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="liczba_miejsc">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Miejsca" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="9" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="9" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="kolor">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Kolor" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="10" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="10" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="termin_przeglądu">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Przegląd" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="11" Style="{StaticResource headerBorder}">
+                        <Border Grid.Column="11" 
+                                Style="{StaticResource headerBorder}"
+                                Tapped="HeaderTapped"
+                                Tag="status_rejestracji">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Status" Style="{StaticResource header}" />
                                 <FontIcon Glyph="&#xE74B;" FontSize="12" Margin="4,0,0,0"/>
@@ -160,40 +195,40 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding NumerRejestracyjny}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding numer_rejestracyjny}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="1" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding Vin}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding VIN}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="2" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding Marka}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding marka}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="3" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding Model}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding model}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="4" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding Rodzaj}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding rodzaj}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="5" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding RokProdukcji}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding rok_produkcji}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="6" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding DaneSilnika}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding dane_silnika}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="7" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding RodzajPaliwa}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding rodzaj_paliwa}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="8" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding LiczbaMiejsc}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding liczba_miejsc}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="9" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding Kolor}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding kolor}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="10" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding TerminPrzeglądu}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding termin_przeglądu}" Style="{StaticResource content}"/>
                             </Border>
                             <Border Grid.Column="11" Style="{StaticResource contentBorder}">
-                                <TextBlock Text="{Binding StatusRejestracji}" Style="{StaticResource content}"/>
+                                <TextBlock Text="{Binding status_rejestracji}" Style="{StaticResource content}"/>
                             </Border>
                         </Grid>
                     </DataTemplate>

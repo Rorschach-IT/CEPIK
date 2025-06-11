@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DataSet.Models;
+﻿namespace DataSet.Models;
 
 public partial class OffensesOfPeopleAndVehicle
 {
@@ -17,7 +14,7 @@ public partial class OffensesOfPeopleAndVehicle
 
     public string? Opis { get; set; }
 
-    public decimal? Mandat { get; set; }
+    public string? Mandat { get; set; }
 
     public short? PunktyKarne { get; set; }
 

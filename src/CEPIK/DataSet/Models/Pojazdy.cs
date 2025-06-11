@@ -18,7 +18,7 @@ public partial class Pojazdy
 
     public string RodzajPaliwa { get; set; } = null!;
 
-    public byte LiczbaMiejsc { get; set; }
+    public short LiczbaMiejsc { get; set; }
 
     public string Kolor { get; set; } = null!;
 

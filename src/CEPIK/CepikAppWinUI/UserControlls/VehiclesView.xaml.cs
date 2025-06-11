@@ -3,6 +3,7 @@ using CepikAppWinUI.ViewModel;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
 using Windows.Graphics;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -44,6 +45,17 @@ namespace CepikAppWinUI.UserControlls
                 int x = (displayArea.WorkArea.Width - width) / 2;
                 int y = (displayArea.WorkArea.Height - height) / 2;
                 appWindow.Move(new PointInt32(x, y));
+            }
+        }
+
+        private bool _sortAscending = true;
+
+        private void HeaderTapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (DataContext is VehicleViewModel viewModel && sender is FrameworkElement element && element.Tag is string propertyName)
+            {
+                viewModel.SortVehicles(propertyName, _sortAscending);
+                _sortAscending = !_sortAscending; // Toggle for next sort
             }
         }
     }

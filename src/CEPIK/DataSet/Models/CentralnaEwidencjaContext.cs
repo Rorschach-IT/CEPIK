@@ -29,6 +29,8 @@ public partial class CentralnaEwidencjaContext : DbContext
 
     public virtual DbSet<Pojazdy> Pojazdies { get; set; }
 
+    public virtual DbSet<Vehicles> Vehicles { get; set; }
+
     public virtual DbSet<Polisa> Polisas { get; set; }
 
     public virtual DbSet<PrzypisaniaUbezpieczenium> PrzypisaniaUbezpieczenia { get; set; }
@@ -156,7 +158,6 @@ public partial class CentralnaEwidencjaContext : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("imię");
             entity.Property(e => e.Mandat)
-                .HasColumnType("money")
                 .HasColumnName("mandat");
             entity.Property(e => e.Nazwisko)
                 .HasMaxLength(100)
@@ -326,6 +327,69 @@ public partial class CentralnaEwidencjaContext : DbContext
                             .HasColumnName("numer_rejestracyjny");
                         j.IndexerProperty<int>("ZdarzenieId").HasColumnName("zdarzenie_id");
                     });
+        });
+
+        modelBuilder.Entity<Vehicles>(entity =>
+        {
+            entity.HasKey(e => e.numer_rejestracyjny);
+
+            entity.ToTable("vehicles");
+
+            entity.Property(e => e.numer_rejestracyjny)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("numer_rejestracyjny");
+
+            entity.Property(e => e.VIN)
+                .HasMaxLength(17)
+                .IsUnicode(false)
+                .HasColumnName("VIN");
+
+            entity.Property(e => e.marka)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("marka");
+
+            entity.Property(e => e.model)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("model");
+
+            entity.Property(e => e.rodzaj)
+                .HasMaxLength(50)
+                .IsUnicode(true)
+                .HasColumnName("rodzaj");
+
+            entity.Property(e => e.rok_produkcji)
+                .HasColumnName("rok_produkcji");
+
+            entity.Property(e => e.dane_silnika)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("dane_silnika");
+
+            entity.Property(e => e.rodzaj_paliwa)
+                .HasMaxLength(12)
+                .IsUnicode(true)
+                .HasColumnName("rodzaj_paliwa");
+
+            entity.Property(e => e.liczba_miejsc)
+                .HasColumnName("liczba_miejsc");
+
+            entity.Property(e => e.kolor)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("kolor");
+
+            entity.Property(e => e.termin_przeglądu)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("termin_przeglądu");
+
+            entity.Property(e => e.status_rejestracji)
+                .HasMaxLength(15)
+                .IsUnicode(false)
+                .HasColumnName("status_rejestracji");
         });
 
         modelBuilder.Entity<Polisa>(entity =>

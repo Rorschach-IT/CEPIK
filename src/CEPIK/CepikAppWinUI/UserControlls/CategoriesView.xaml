@@ -43,9 +43,7 @@
         <local:ReusableContent Grid.Column="3"/>
 
         <ScrollViewer Grid.Row="1"
-                  Grid.ColumnSpan="4"
-                  HorizontalScrollBarVisibility="Disabled" 
-                  VerticalScrollBarVisibility="Auto">
+                      Grid.ColumnSpan="4">
             <ListView SelectionMode="None"
                       ItemsSource="{Binding Categories}">
                 <ListView.Header>
