@@ -1,4 +1,9 @@
-﻿using Microsoft.UI.Xaml;
+﻿using System;
+using DataSet.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.UI.Xaml;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -14,9 +19,24 @@ namespace CepikAppWinUI
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        /// 
+        public static IServiceProvider Services { get; private set; }
+
         public App()
         {
             this.InitializeComponent();
+            var builder = new ConfigurationBuilder()
+            .AddUserSecrets<App>(); // odczyt z secrets.json
+
+            var configuration = builder.Build();
+
+            var services = new ServiceCollection();
+            services.AddSingleton<IConfiguration>(configuration);
+
+            services.AddDbContext<CentralnaEwidencjaContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("CentralnaEwidencja")));
+
+            Services = services.BuildServiceProvider();
         }
 
         /// <summary>
